@@ -1,0 +1,26 @@
+<import src="../../component/dist/tab/index.wxml" />
+
+<view class="container">
+
+  <view style="margin: 20px 0">
+    <template
+      is="zan-tab"
+      data="{{ ...tab1, componentId: 'tab1' }}"></template>
+  </view>
+
+
+      <movie style="display:{{tab1.selectedId=='coming_soon'?'block':'none'}}"  typenem="/movie/coming_soon">
+
+      </movie>
+      <movie style="display:{{tab1.selectedId=='in_theaters'?'block':'none'}}"  typenem="/movie/in_theaters/{{ip}}">
+
+      </movie>
+    
+      <movie style="display:{{tab1.selectedId=='top'?'block':'none'}}"  typenem="/movie/top250">
+
+      </movie>
+
+    
+
+
+</view>

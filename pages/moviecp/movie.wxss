@@ -1,0 +1,29 @@
+/* pages/moviecp/movie.wxss */
+@import "../dist/index.wxss";
+ .types{
+   color:rgba(0, 0, 0, 0.54);
+ } 
+
+.icon-wrap {
+  /* width: 20%;
+  height: 100px; */
+  float: right;
+  text-align: center;
+}
+.icon-classname {
+  color: #999;
+  font-size: 10px;
+}
+.zan-icon {
+  font-size: 24px;
+    color: rgb(33, 150, 243);
+
+}
+button{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.button-sp-area{
+  margin: 0 auto;
+  width: 60%;
+}

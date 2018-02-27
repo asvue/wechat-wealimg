@@ -1,0 +1,38 @@
+<!--index.wxml-->
+  <wxs module="dateFr">
+ 
+var formatTime = function formatTime(dates) {
+var date=getDate(dates)
+ var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+
+  return [year, month, day].map(formatNumber).join('-') ;
+};
+
+var formatNumber = function formatNumber(n) {
+  n = n.toString();
+  return n[1] ? n : '0' + n;
+};
+module.exports = {
+  formatTime: formatTime
+}
+
+
+
+
+</wxs>
+
+<view>
+
+  <view class= "card" wx:for = "{{result}}" >
+  
+    <view   bindtap ="onItemClick">
+       <image id='{{index}}' class= "image" mode="aspectFill"  data-url="{{item.imgsrc}}"  src="{{item.imgsrc}}" binderror="imgerr" ></image>
+       <view class="title">{{item.title}} --{{dateFr.formatTime(item.creat_time)}}</view>
+    </view>
+
+  </view>
+
+</view>
+

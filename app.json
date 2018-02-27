@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wealimg/wealimg",
+    "pages/image/image",
+    "pages/moviedetail/moviedetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2196f3",
+    "navigationBarTitleText": "asvue",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#2196f3",
+    "color": "hsla(0,0%,100%,.54)",
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "电影",
+        "iconPath": "image/movie.png",
+        "selectedIconPath": "image/movie1.png"
+      },
+      {
+        "pagePath": "pages/wealimg/wealimg",
+        "text": "图片",
+        "iconPath": "image/img.png",
+        "selectedIconPath": "image/img1.png"
+      }
+    ]
+  }
+}

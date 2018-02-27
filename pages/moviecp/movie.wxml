@@ -1,0 +1,44 @@
+<view wx:for="{{result}}" wx:key="{{index}}" data-id='{{item.id}}' bindtap='clickdetail'>
+
+  <view style="padding:10rpx 40rpx;background-color:#fff;margin:10rpx 0;">
+
+    <view style='display:flex;flex:1;align-items:center;min-height:88px;'>
+
+      <view style="width:90rpx;height:90rpx;display:inline-block;border-radius:90rpx;overflow:hidden;margin-right:40rpx;">
+        <image style="width:100%;height:100%;" src="{{item.images.large}}"></image>
+      </view>
+
+
+      <view style="width:70%;">
+        <view style='display:flex;white-space:normal;flex:1;font-size:28rpx;flex-direction:column;'>
+
+          <view>{{item.title}}</view>
+
+          <view>
+            <block wx:for="{{item.genres}}" wx:for-item="genres">
+              <text class='types' decode="{{true}}">{{genres}}&nbsp;</text>
+            </block>
+            <text class='types' decode="{{true}}">{{item.year}}&nbsp;</text>
+            <text class='types'>平均({{item.rating.average}})分</text>
+          </view>
+
+        </view>
+      </view>
+
+      <view class="icon-wrap">
+        <view class="zan-icon zan-icon-browsing-history"></view>
+      </view>
+
+
+    </view>
+
+
+
+  </view>
+
+
+</view>
+<view class="button-sp-area">
+
+  <button type="primary" plain="true" bindtap='clickload'>点击加载</button>
+</view>
