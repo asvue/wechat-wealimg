@@ -38,7 +38,7 @@ Page({
       commentCount: data.comments_count,
       year: data.year,
       generes: data.genres.join("、"),
-      // stars: util.convertToStarsArray(data.rating.stars),
+      stars: util.convertToStarsArray(data.rating.stars),
       score: data.rating.average,
       director: director,
       casts: util.convertToCastString(data.casts),

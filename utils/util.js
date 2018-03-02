@@ -35,6 +35,20 @@ function http(url, callback) {
   })
 }
 
+//星星返回数据格式：[1,1,1,1,1,][1,1,1,,0,0]
+function convertToStarsArray(stars) {
+  var num = stars.toString().substring(0, 1);
+  var array = [];
+  for (var i = 1; i <= 5; i++) {
+    if (i <= num) {
+      array.push(1);
+    }
+    else {
+      array.push(0);
+    }
+  }
+  return array;
+}
 
 //拆分字符串，通过斜杠链接
 function convertToCastString(casts) {
@@ -62,5 +76,6 @@ module.exports = {
   formatTime: formatTime,
   convertToCastInfos: convertToCastInfos,
   convertToCastString: convertToCastString,
+  convertToStarsArray: convertToStarsArray,
   http:http
 }
