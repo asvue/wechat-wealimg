@@ -27,9 +27,8 @@ Page( {
         "Content-Type": "application/json"
       }, // 设置请求的 header
       success: function (res) {
-
         that.setData({
-          'result': that.data.result.concat(res.data.param)
+          'result': that.data.result.concat(res.data)
         })
         // wx.setStorageSync('datas', res.data.param);
         //  that.setData({

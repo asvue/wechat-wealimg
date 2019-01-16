@@ -41,8 +41,7 @@ App({
       }, // 设置请求的 header
       success: function (res) {
         let data = res.data
-        var ip = data.split("=")[1].split(";")[0];
-        wx.setStorageSync('ip',JSON.parse(ip).city);
+        wx.setStorageSync('ip',data.city);
         
       },
       fail: function () {

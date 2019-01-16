@@ -25,7 +25,7 @@ module.exports = {
 
 <view>
 
-  <view class= "card" wx:for = "{{result}}" >
+  <view class= "card" wx:for = "{{result}}"  >
   
     <view   bindtap ="onItemClick">
        <image id='{{index}}' class= "image" mode="aspectFill"  data-url="{{item.imgsrc}}"  src="{{item.imgsrc}}" binderror="imgerr" ></image>
